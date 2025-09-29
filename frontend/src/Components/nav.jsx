@@ -1,6 +1,13 @@
+// To make this code run in your VS Code React project, you must first install the necessary dependencies:
+// 1. Framer Motion (for animations): npm install framer-motion
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import LandingImage from '../assets/images/logo.png'; 
+
+// === FIX: Image Resolution Issue ===
+// Using a root-relative path (e.g., '/logo.png') is the most reliable method here,
+// assuming the logo is available in a publicly accessible folder (like 'public/').
+const LOGO_SRC = '/logo.png'; 
 
 // Animation Variants
 const navItemVariants = {
@@ -20,7 +27,7 @@ export default function App() {
 
   return (
     <div className="bg-[#ffffff] min-h-screen font-sans">
-      {/* Navbar */}
+      {/* 1. Navbar (Fixed) */}
       <motion.nav
         className="w-full fixed top-0 left-0 z-50 bg-[#ffffff] bg-opacity-90 backdrop-blur-md shadow-md border-b border-[#583d2b]/20"
         initial={{ y: -80, opacity: 0 }}
@@ -36,8 +43,7 @@ export default function App() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <img
-              // === Using the imported image variable ===
-              src={LandingImage}
+              src={LOGO_SRC}
               alt="Build Right Studios Logo"
               className="h-10 rounded-md"
             />
@@ -121,6 +127,13 @@ export default function App() {
           </motion.div>
         )}
       </motion.nav>
+
+      {/* 2. Main Content Area (Starts Right After Navbar, no extra space/scroll) */}
+      <main className="pt-20"> 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* ✅ Your next component will go here */}
+        </div>
+      </main>
     </div>
   );
 }
