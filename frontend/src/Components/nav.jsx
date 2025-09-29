@@ -1,12 +1,5 @@
-// To make this code run in your VS Code React project, you must first install the necessary dependencies:
-// 1. Framer Motion (for animations): npm install framer-motion
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
-// === FIX: Image Resolution Issue ===
-// Using a root-relative path (e.g., '/logo.png') is the most reliable method here,
-// assuming the logo is available in a publicly accessible folder (like 'public/').
 const LOGO_SRC = '/logo.png'; 
 
 // Animation Variants
@@ -128,10 +121,8 @@ export default function App() {
         )}
       </motion.nav>
 
-      {/* 2. Main Content Area (Starts Right After Navbar, no extra space/scroll) */}
       <main className="pt-20"> 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* ✅ Your next component will go here */}
         </div>
       </main>
     </div>
