@@ -70,7 +70,7 @@ const About = () => {
                                     className="text-center sm:text-left"
                                     variants={itemVariants}
                                 >
-                                    <p className="text-4xl font-bold text-indigo-600">{stat.value}</p>
+                                    <p className="text-4xl font-bold text-orange-600">{stat.value}</p>
                                     <p className="mt-2 text-base text-gray-500">{stat.label}</p>
                                 </motion.div>
                             ))}
