@@ -5,6 +5,7 @@ import LandingPage from './Components/nlanding.jsx'
 import Footer from './Components/footer.jsx';
 import Newlanding from './Components/Pland.jsx'
 import Bar from './Components/Bar.jsx'
+import About from './About.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <Nav />
       <Newlanding />
       <Bar />
+      <About />
 
       {/* <Nav /> */}
       {/* <LandingPage /> */}
