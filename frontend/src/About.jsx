@@ -1,9 +1,5 @@
-// src/components/AboutSection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-
-// For the purpose of this example, let's assume you have an image:
-// import TeamImage from '../assets/team_meeting.jpg'; 
 
 const statistics = [
   { value: '50+', label: 'Projects Delivered' },
@@ -18,7 +14,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // Stagger delay for children elements
+      staggerChildren: 0.1,
     },
   },
 };
@@ -72,7 +68,7 @@ const About = () => {
                 <motion.div 
                   key={index} 
                   className="text-center sm:text-left"
-                  variants={itemVariants} // Applies individual fade-in
+                  variants={itemVariants} 
                 >
                   <p className="text-4xl font-bold text-indigo-600">{stat.value}</p>
                   <p className="mt-2 text-base text-gray-500">{stat.label}</p>
@@ -101,7 +97,6 @@ const About = () => {
             <div className="absolute bottom-[-20px] left-0 sm:left-4 z-10">
               <div className="bg-orange-600 text-white p-4 pr-6 rounded-lg shadow-xl flex items-center space-x-2">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  {/* Icon placeholder (e.g., a quality/medal icon) */}
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944c-1.347 0-2.671.192-3.957.568M21 12c0 1.856-.47 3.655-1.36 5.25l-2.02-2.02a3 3 0 00-4.242 0l-2.02 2.02A11.955 11.955 0 013 12c0-1.856.47-3.655 1.36-5.25l2.02 2.02a3 3 0 004.242 0l2.02-2.02A11.955 11.955 0 0121 12z" />
                 </svg>
                 <div>
